@@ -2361,6 +2361,8 @@
     <Content Include="PDFs\395f0adb-3a90-4d7d-b8b3-8b27157a0aa3.pdf" />
     <Content Include="PDFs\e9cdb50a-8e31-4211-b324-1eb29039475a.pdf" />
     <Content Include="ApplicationInsights.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\KnowledgeNexus20241218183426 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\pdfobjects.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
