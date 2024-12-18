@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="KnowledgeNexus.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Nexus</title>
+    <link rel="shortcut icon" href="Icons/Aicon.jpg" />
+
+    
+    
+    <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="DataTable/CSS/dataTables.dataTables.min.css" rel="stylesheet" />
+    <link href="FontAwesome/css/all.css" rel="stylesheet" />
+    <link href="SweetAlert/Style/sweetalert.css" rel="stylesheet" />
+
+    <script src="Bootstrap/JS/jquery.min.js"></script>
+    <script src="Bootstrap/JS/popper.min.js"></script>
+    <script src="Bootstrap/JS/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="DataTable/JS/dataTables.dataTables.min.js"></script>
+    <script src="SweetAlert/Script/sweetalert.min.js"></script>
+
+    <script src="Scripts/pdf.min.js"></script>
+    <asp:ContentPlaceHolder ID="header" runat="server"></asp:ContentPlaceHolder>
+    <%--<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <form runat="server">
+
+
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" runat="server" href="~/default.aspx">
+                    <div class="logo">
+                        <div class="group">
+                            <img src="Icons/Aicon.jpg" alt="logo" width="40" height="40" />
+                            Knowledge Nexus eLibrary
+                        </div>
+                    </div>
+                </a>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/default.aspx"><b>Home</b></a></li>
+                        <li class="nav-item"><a id="About" class="nav-link" runat="server" href="~/About"><b>About</b></a></li>
+                        <li class="nav-item"><a id="Contact" class="nav-link" runat="server" href="~/Contact"><b>Contact</b></a></li>
+                        <li class="nav-item">
+                            <asp:LinkButton Visible="false" ID="lnk3" class="nav-link" runat="server" OnClick="lnk3_Click"><b>Authors</b></asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton Visible="false" ID="lnk4" class="nav-link" runat="server" OnClick="lnk4_Click"><b>Publishers</b></asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton Visible="false" ID="lnk5" class="nav-link" runat="server" OnClick="lnk5_Click"><b>Members</b></asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton Visible="false" ID="lnk6" class="nav-link" runat="server" OnClick="lnk6_Click"><b>Books</b></asp:LinkButton>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-sm btn-dark" Visible="false" ForeColor="Yellow" ID="lnk2" runat="server" OnClick="lnk2_Click">Hello User</asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-sm btn-dark" ID="lnkBtnViewBook" runat="server" OnClick="lnkBtnViewBook_Click">View Books</asp:LinkButton>&nbsp
+
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-sm btn-dark" ID="lnkBtnSignup" runat="server" OnClick="lnkBtnSignup_Click">Signup</asp:LinkButton>&nbsp
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-sm btn-dark" ID="lnkBtnLogin" runat="server" OnClick="lnkBtnLogin_Click">Login</asp:LinkButton>&nbsp
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-sm btn-dark" Visible="false" ID="lnk1" runat="server" OnClick="lnk1_Click">Logout</asp:LinkButton>&nbsp
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron text-center alert alert-secondary" style="margin-bottom: 0">
+            <h1>Knowledge Nexus</h1>
+            <p>Your Gateway to Infinite Knowledge!</p>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <hr />
+        <div class="jumbotron-fluid bg-secondary" style="margin-top: 2%">
+            <br />
+            <div class="col-md-12 text-center" style="color: beige">
+                <footer>
+                    <h5>
+                        <p>&copy; <%: DateTime.Now.Year %> - Knowledge Nexus, eLibrary Application</p>
+                    </h5>
+                </footer>
+            </div>
+            <br />
+        </div>
+    </form>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+</body>
+</html>

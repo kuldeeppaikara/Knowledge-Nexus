@@ -1,0 +1,22 @@
+﻿body {
+}
+.container-fluid {
+    min-height: 100vh; /* Set minimum height to viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Optional: Style the header and main content */
+header {
+    /* Your header styles */
+}
+
+main {
+    flex-grow: 1; /* Make the main content take up available space */
+}
