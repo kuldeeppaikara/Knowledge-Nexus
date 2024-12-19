@@ -31,18 +31,7 @@
                     <p>Lose yourself in captivating stories, learn new skills, or explore different cultures. Reading can transport you to distant lands, introduce you to fascinating characters, and teach you valuable lessons.</p>
                 </center>
             </div>
-
-
-
-
-
-
-
-
         </div>
-
-
-
     </div>
 
 
